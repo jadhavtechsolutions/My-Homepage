@@ -1,228 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Jadhav Tech Solutions | Cloud, DevOps & IT Services</title>
-  <meta name="description" content="Jadhav Tech Solutions provides 24x7 Technical Support, Cloud & DevOps, Kubernetes, Application Testing and Data Services.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1630">
+  <title>Jadhav Tech Solutions | Cloud, DevOps & Digital Engineering</title>
+  <meta name="description" content="Jadhav Tech Solutions helps businesses with cloud engineering, DevOps automation, Kubernetes, IT support, application testing and business automation.">
+  <meta property="og:title" content="Jadhav Tech Solutions | Build. Automate. Scale.">
+  <meta property="og:description" content="Practical cloud, DevOps and IT solutions for growing businesses.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="logo.png">
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f4f6f9;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #0a2540;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header img {
-      max-width: 130px;
-      margin-bottom: 15px;
-    }
-
-    header h1 {
-      margin: 10px 0;
-      font-size: 34px;
-    }
-
-    header p {
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 40px 20px;
-      background: #ffffff;
-      border-radius: 6px;
-    }
-
-    h2 {
-      color: #0a2540;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .service-box {
-      background: #f9fbfd;
-      padding: 20px;
-      border-left: 4px solid #1ccad8;
-      border-radius: 4px;
-    }
-
-    .service-box h3 {
-      margin-top: 0;
-      color: #0a2540;
-    }
-
-    .cta {
-      background: #1ccad8;
-      color: #0a2540;
-      text-align: center;
-      padding: 40px 20px;
-      border-radius: 6px;
-      max-width: 1100px;
-      margin: 40px auto;
-    }
-
-    .cta a {
-      color: #0a2540;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer {
-      background: #0a2540;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 14px;
-    }
+    :root{--navy:#0b1630;--navy-2:#122447;--blue:#3679f6;--cyan:#71e0e6;--ink:#17233d;--muted:#61708a;--line:#e3e9f2;--soft:#f5f8fd;--white:#fff;--radius:20px;--shadow:0 18px 50px rgba(15,35,73,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65}a{color:inherit}button,input,textarea{font:inherit}.container{width:min(1160px,calc(100% - 40px));margin-inline:auto}.skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:16px;top:16px;background:#fff;padding:12px;z-index:1000}.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(227,233,242,.85)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}.brand img{width:46px;height:46px;object-fit:contain;border-radius:12px}.brand-text{display:flex;flex-direction:column;line-height:1.2}.brand-text strong{font-size:15px;letter-spacing:-.3px}.brand-text span{font-size:10px;color:var(--muted);letter-spacing:1.5px;margin-top:5px}.nav-links{display:flex;align-items:center;gap:26px}.nav-links a{text-decoration:none;font-size:13px;font-weight:650;color:#526079}.nav-links a:hover{color:var(--blue)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 19px;background:var(--blue);color:#fff;text-decoration:none;font-size:13px;font-weight:750;box-shadow:0 8px 22px rgba(54,121,246,.22);transition:transform .2s,background .2s;cursor:pointer}.nav-cta:hover,.btn:hover{transform:translateY(-2px);background:#2466df}.menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px;color:var(--ink)}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 25%,rgba(54,121,246,.25),transparent 35%),radial-gradient(ellipse at 20% 100%,rgba(113,224,230,.13),transparent 38%),var(--navy);color:#fff;padding:88px 0 78px}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to right,transparent,black)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:56px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#9cebf0;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800}.eyebrow:before{content:"";width:24px;height:2px;background:var(--cyan)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(40px,5.4vw,66px);letter-spacing:-2.8px;line-height:1.08;margin:21px 0}.gradient-text{background:linear-gradient(90deg,#fff,#8ee5ef 78%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy{max-width:590px;color:#c4d0e4;font-size:17px;line-height:1.8}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn-secondary{background:transparent;border:1px solid #506180;box-shadow:none;color:#fff}.btn-secondary:hover{background:#1a2b4b}.trust-line{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px;color:#c4d0e4;font-size:12px}.trust-line span{display:flex;align-items:center;gap:8px}.check{color:var(--cyan);font-weight:900}.hero-visual{position:relative;min-height:380px;display:flex;align-items:center;justify-content:center}.orb{position:absolute;width:310px;height:310px;border-radius:50%;border:1px solid rgba(142,229,239,.25);box-shadow:0 0 0 35px rgba(142,229,239,.035),0 0 0 75px rgba(142,229,239,.025)}.dashboard{position:relative;width:min(100%,430px);padding:22px;border:1px solid rgba(255,255,255,.18);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.04));backdrop-filter:blur(14px);box-shadow:0 30px 90px rgba(0,0,0,.25);transform:rotate(-2deg)}.dash-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.12);font-size:12px;color:#e2eafa}.live{display:flex;align-items:center;gap:7px;color:#a4f1cf}.live:before{content:"";width:7px;height:7px;border-radius:50%;background:#59dfa2;box-shadow:0 0 0 4px rgba(89,223,162,.12)}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.metric{padding:17px;border-radius:15px;background:rgba(5,15,36,.4);border:1px solid rgba(255,255,255,.08)}.metric span{display:block;color:#a9b8d0;font-size:11px}.metric strong{display:block;font-size:23px;margin:5px 0;color:#fff}.metric small{color:#8ee5ef;font-size:10px}.chart{height:80px;margin-top:16px;border-radius:15px;background:rgba(5,15,36,.35);padding:14px;display:flex;align-items:end;gap:8px}.chart i{display:block;flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(to top,#3679f6,#8ee5ef);opacity:.9}.float-chip{position:absolute;background:#fff;color:var(--ink);border-radius:14px;padding:12px 15px;box-shadow:var(--shadow);font-size:12px;font-weight:750}.float-chip span{display:block;font-size:10px;font-weight:500;color:var(--muted)}.chip-one{left:-4px;bottom:34px}.chip-two{right:-3px;top:30px}
+    .logo-strip{border-bottom:1px solid var(--line);background:#fff}.logo-strip-inner{display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap;padding:22px 0;color:#6c7890;font-size:12px;font-weight:750}.logo-strip-inner span{display:flex;align-items:center;gap:8px}.logo-strip-inner b{color:#2f4263;font-size:13px}
+    .section{padding:88px 0}.section-soft{background:var(--soft)}.section-head{max-width:690px;margin:0 auto 42px;text-align:center}.section-kicker{color:var(--blue);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:850}.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.2;letter-spacing:-1.5px;margin:13px 0}.section-head p{color:var(--muted);margin-bottom:0}.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-card{position:relative;display:flex;flex-direction:column;padding:27px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;min-height:270px;transition:transform .2s,box-shadow .2s,border-color .2s}.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c8d8f4}.service-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:#edf4ff;color:var(--blue);margin-bottom:21px}.service-icon svg{width:23px;height:23px}.service-card h3{font-size:18px;letter-spacing:-.4px;margin-bottom:10px}.service-card p{font-size:13px;color:var(--muted);margin-bottom:22px}.service-card a{margin-top:auto;text-decoration:none;color:var(--blue);font-size:12px;font-weight:800}.service-card a span{margin-left:5px}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.pill{padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#526079;font-size:11px;font-weight:650}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.about-panel{position:relative;min-height:390px;border-radius:26px;background:linear-gradient(145deg,#10244a,#0b1630);padding:30px;overflow:hidden;color:#fff}.about-panel:before,.about-panel:after{content:"";position:absolute;border:1px solid rgba(113,224,230,.3);border-radius:50%;width:270px;height:270px;right:-80px;top:-70px}.about-panel:after{width:190px;height:190px;right:-40px;top:-30px}.about-logo{position:relative;z-index:1;width:76px;height:76px;background:#fff;border-radius:20px;padding:8px;object-fit:contain}.about-panel h3{position:relative;z-index:1;font-size:27px;line-height:1.25;max-width:290px;margin-top:45px}.about-panel p{position:relative;z-index:1;color:#bdcce2;font-size:13px;max-width:330px}.about-badges{position:relative;z-index:1;display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}.about-badges span{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 10px;font-size:10px;color:#dbe8f7}.split-copy .section-kicker{display:block}.split-copy h2{font-size:clamp(30px,4vw,43px);line-height:1.2;letter-spacing:-1.5px;margin:14px 0}.split-copy>p{color:var(--muted);font-size:15px}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}.benefit{display:flex;gap:11px;align-items:flex-start}.benefit-icon{flex:0 0 28px;width:28px;height:28px;border-radius:9px;background:#e8f7f8;color:#128b99;display:grid;place-items:center;font-weight:900}.benefit strong{display:block;font-size:13px}.benefit small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.process-step{padding:23px;border:1px solid var(--line);background:#fff;border-radius:18px}.step-num{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--navy);color:#fff;font-weight:800;font-size:12px;margin-bottom:20px}.process-step h3{font-size:16px;margin-bottom:8px}.process-step p{color:var(--muted);font-size:12px;margin-bottom:0}
+    .cta-band{padding:0 0 88px}.cta-inner{position:relative;overflow:hidden;display:flex;justify-content:space-between;align-items:center;gap:30px;padding:45px 48px;border-radius:26px;background:linear-gradient(115deg,#10244a,#1e4d91);color:#fff}.cta-inner:after{content:"";position:absolute;right:12%;top:-140px;width:320px;height:320px;border:1px solid rgba(255,255,255,.13);border-radius:50%;box-shadow:0 0 0 35px rgba(255,255,255,.035),0 0 0 75px rgba(255,255,255,.025)}.cta-copy,.cta-inner .btn{position:relative;z-index:1}.cta-copy h2{font-size:clamp(26px,3.6vw,38px);letter-spacing:-1px;line-height:1.2;margin-bottom:10px}.cta-copy p{color:#c8d8ef;margin-bottom:0;font-size:13px}.btn-light{background:#fff;color:var(--navy);box-shadow:none}.btn-light:hover{background:#e9f4ff;color:var(--navy)}
+    .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.contact-copy h2{font-size:36px;letter-spacing:-1.2px;line-height:1.2}.contact-copy p{color:var(--muted);font-size:14px}.contact-detail{display:flex;align-items:flex-start;gap:13px;margin-top:22px}.contact-detail .service-icon{flex:0 0 42px;width:42px;height:42px;margin:0;border-radius:12px}.contact-detail strong{display:block;font-size:13px}.contact-detail a,.contact-detail span{font-size:12px;color:var(--muted);text-decoration:none;overflow-wrap:anywhere}.contact-form{padding:28px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 12px 40px rgba(15,35,73,.06)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field-full{grid-column:1/-1}.field label{font-size:12px;font-weight:750}.field input,.field textarea,.field select{width:100%;padding:12px 13px;border:1px solid #dbe3ef;border-radius:11px;background:#fbfcff;color:var(--ink);outline:none;font-size:13px}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(54,121,246,.1)}.field textarea{min-height:110px;resize:vertical}.form-note{font-size:10px;color:var(--muted);margin:12px 0 0}.form-status{font-size:12px;color:#185b3c;margin-top:10px;display:none}.form-status.show{display:block}
+    footer{background:#081126;color:#dbe5f4;padding:48px 0 20px}.footer-top{display:flex;justify-content:space-between;gap:40px;padding-bottom:32px}.footer-brand{max-width:360px}.footer-brand .brand{margin-bottom:16px}.footer-brand .brand-text strong{color:#fff}.footer-brand .brand-text span{color:#8fa2bf}.footer-brand p{color:#9aabc4;font-size:12px}.footer-links h3{font-size:12px;color:#fff;margin-bottom:15px}.footer-links a{display:block;text-decoration:none;color:#9aabc4;font-size:12px;margin:9px 0}.footer-links a:hover{color:#fff}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;display:flex;justify-content:space-between;gap:20px;color:#8798b1;font-size:10px}
+    .chat-launcher{position:fixed;right:22px;bottom:22px;z-index:80;display:flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:13px 18px;background:var(--blue);color:#fff;box-shadow:0 12px 35px rgba(23,76,170,.35);font-weight:800;font-size:12px;cursor:pointer}.chat-launcher svg{width:20px;height:20px}.chat-panel{position:fixed;right:22px;bottom:84px;z-index:81;width:min(360px,calc(100vw - 28px));height:min(510px,calc(100vh - 120px));display:none;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 25px 80px rgba(9,25,55,.25);overflow:hidden}.chat-panel.open{display:flex}.chat-head{background:var(--navy);color:#fff;padding:17px;display:flex;align-items:center;gap:11px}.bot-avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#244a86}.bot-avatar svg{width:21px;height:21px}.chat-head strong{display:block;font-size:13px}.chat-head small{display:block;color:#b9c9e2;font-size:10px}.chat-close{margin-left:auto;border:0;background:transparent;color:#fff;font-size:23px;cursor:pointer}.chat-messages{flex:1;overflow:auto;padding:15px;background:#f7f9fd}.message{max-width:90%;padding:11px 12px;border-radius:13px;margin:0 0 10px;font-size:12px;line-height:1.55;white-space:pre-wrap}.message.bot{background:#fff;border:1px solid var(--line);border-top-left-radius:4px}.message.user{margin-left:auto;background:#e4efff;color:#153c7a;border-top-right-radius:4px}.chat-options{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 12px}.chat-option{border:1px solid #c8d8f4;background:#fff;color:#2459a8;border-radius:999px;padding:8px 10px;font-size:11px;font-weight:700;cursor:pointer}.chat-option:hover{background:#eaf2ff}.chat-compose{border-top:1px solid var(--line);padding:10px 13px;color:var(--muted);font-size:10px}.chat-compose a{color:var(--blue);font-weight:750}.chat-notice{font-size:10px;color:var(--muted);padding:0 13px 10px;background:#fff}
+    @media(max-width:900px){.nav-links{gap:15px}.nav-links a{font-size:12px}.hero-grid{gap:30px}.hero{padding:68px 0}.hero-visual{min-height:330px}.dashboard{padding:17px}.split{gap:38px}.services-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.contact-grid{gap:28px}}
+    @media(max-width:700px){.container{width:min(100% - 30px,560px)}.nav{min-height:70px}.brand img{width:40px;height:40px}.brand-text strong{font-size:13px}.brand-text span{font-size:9px}.menu-toggle{display:block}.nav-cta{display:none}.nav-links{display:none;position:absolute;left:0;right:0;top:69px;padding:18px 22px 22px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 15px 30px rgba(15,35,73,.08);align-items:stretch;flex-direction:column;gap:0}.nav-links.open{display:flex}.nav-links a{padding:11px 0;font-size:14px}.hero{padding:57px 0 45px}.hero-grid{grid-template-columns:1fr;gap:24px}.hero h1{font-size:43px;letter-spacing:-1.8px}.hero-copy{font-size:15px}.hero-visual{min-height:300px}.orb{width:230px;height:230px}.dashboard{max-width:390px;transform:none}.chip-one{left:0;bottom:10px}.chip-two{right:0;top:5px}.logo-strip-inner{gap:16px;padding:18px 0}.logo-strip-inner span{font-size:10px}.section{padding:64px 0}.section-head{margin-bottom:28px}.section-head h2{font-size:32px}.services-grid{grid-template-columns:1fr}.service-card{min-height:unset;padding:23px}.split{grid-template-columns:1fr;gap:30px}.about-panel{min-height:330px}.about-panel h3{margin-top:28px}.benefits{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr;gap:10px}.process-step{padding:17px}.cta-band{padding-bottom:64px}.cta-inner{padding:30px 24px;align-items:flex-start;flex-direction:column}.contact-grid{grid-template-columns:1fr}.contact-form{padding:20px}.form-grid{grid-template-columns:1fr}.field-full{grid-column:auto}.footer-top{flex-wrap:wrap;gap:25px}.footer-brand{flex-basis:100%}.footer-bottom{flex-direction:column;gap:7px}.chat-launcher{right:14px;bottom:14px;padding:12px 15px}.chat-panel{right:14px;bottom:74px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
   </style>
 </head>
-
 <body>
-
-<header>
-  <img src="logo.png" alt="Jadhav Tech Solutions Logo">
-  <h1>Jadhav Tech Solutions</h1>
-  <p>Reliable Cloud, DevOps & Managed IT Services</p>
-</header>
-
-<section>
-  <h2>About Us</h2>
-  <p>
-    Jadhav Tech Solutions is a professional IT services company delivering reliable
-    and scalable technology solutions to businesses worldwide. We specialize in
-    Technical Support, Cloud & DevOps services, Kubernetes deployments,
-    application testing, monitoring, and data services.
-  </p>
-  <p>
-    Our team consists of 20+ multi-skilled IT engineers with 3 to 10 years of
-    industry experience, enabling us to support startups, SMEs, and enterprises
-    with high availability, security, and operational excellence.
-  </p>
-</section>
-
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-
-    <div class="service-box">
-      <h3>24×7 Technical & Production Support</h3>
-      <p>Round-the-clock L1/L2/L3 support for applications, servers, and cloud environments.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Jadhav Tech Solutions home"><img src="logo.png" alt="Jadhav Tech Solutions logo"><span class="brand-text"><strong>Jadhav Tech Solutions</strong><span>CLOUD · DEVOPS · IT SOLUTIONS</span></span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#about">About</a><a href="#process">How We Work</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Discuss a Project <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰</button>
     </div>
+  </header>
 
-    <div class="service-box">
-      <h3>24×7 Monitoring</h3>
-      <p>Proactive infrastructure and application monitoring to ensure high availability.</p>
-    </div>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Your technology partner</span>
+          <h1>Build. Automate.<br><span class="gradient-text">Scale with confidence.</span></h1>
+          <p class="hero-copy">Practical cloud, DevOps and IT solutions for growing businesses. We help teams streamline deployments, improve reliability and spend less time fighting repetitive technical problems.</p>
+          <div class="hero-actions"><a class="btn" href="#contact">Discuss Your Project <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#services">Explore Services <span aria-hidden="true">↓</span></a></div>
+          <div class="trust-line"><span><b class="check">✓</b> Automation-first thinking</span><span><b class="check">✓</b> Cloud-native practices</span><span><b class="check">✓</b> Clear delivery scope</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration of cloud engineering and monitoring dashboards">
+          <div class="orb"></div>
+          <div class="float-chip chip-two">Cloud-ready <span>Designed for growth</span></div>
+          <div class="dashboard"><div class="dash-top"><strong>Engineering overview</strong><span class="live">Systems concept</span></div><div class="metric-grid"><div class="metric"><span>Deployment workflow</span><strong>CI/CD</strong><small>Repeatable releases</small></div><div class="metric"><span>Infrastructure</span><strong>IaC</strong><small>Consistent environments</small></div><div class="metric"><span>Container platform</span><strong>K8s</strong><small>Orchestrated workloads</small></div><div class="metric"><span>Observability</span><strong>Logs +</strong><small>Metrics and alerts</small></div></div><div class="chart" aria-hidden="true"><i style="height:28%"></i><i style="height:48%"></i><i style="height:39%"></i><i style="height:65%"></i><i style="height:52%"></i><i style="height:78%"></i><i style="height:61%"></i><i style="height:90%"></i><i style="height:72%"></i><i style="height:98%"></i></div></div>
+          <div class="float-chip chip-one">Delivery mindset <span>Plan · Build · Improve</span></div>
+        </div>
+      </div>
+    </section>
 
-    <div class="service-box">
-      <h3>Azure Cloud & DevOps</h3>
-      <p>CI/CD pipelines, automation, monitoring, security, and cost optimization.</p>
-    </div>
+    <div class="logo-strip"><div class="container logo-strip-inner"><span><b>Cloud</b> AWS · Azure · GCP</span><span><b>Platform</b> Kubernetes · Docker</span><span><b>Automation</b> Terraform · CI/CD</span><span><b>Quality</b> Testing · Monitoring</span></div></div>
 
-    <div class="service-box">
-      <h3>Kubernetes Deployment & Monitoring</h3>
-      <p>Design, deployment, scaling, and management of Kubernetes clusters.</p>
-    </div>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head"><span class="section-kicker">What we do</span><h2>Technology services built around your goals</h2><p>Choose a focused service or combine capabilities into a solution that fits your environment, team and delivery needs.</p></div>
+        <div class="services-grid">
+          <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18h12a4 4 0 0 0 .4-8A6.5 6.5 0 0 0 6 8.5 4.8 4.8 0 0 0 6 18Z"/><path d="m9 13 3-3 3 3M12 10v8"/></svg></div><h3>Cloud & DevOps Engineering</h3><p>Build repeatable delivery workflows and manage cloud infrastructure with automation, version control and practical operational standards.</p><a href="#contact" data-service="Cloud & DevOps Engineering">Discuss this service <span>→</span></a></article>
+          <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 20 7.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="m4.5 7.8 7.5 4.4 7.5-4.4M12 12.2V21"/></svg></div><h3>Kubernetes & Containers</h3><p>Support containerized workloads, deployment templates, cluster configuration and troubleshooting across cloud-native platforms.</p><a href="#contact" data-service="Kubernetes & Containers">Discuss this service <span>→</span></a></article>
+          <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg></div><h3>IT Support & Monitoring</h3><p>Improve operational visibility with agreed monitoring, log review, incident troubleshooting and maintenance support.</p><a href="#contact" data-service="IT Support & Monitoring">Discuss this service <span>→</span></a></article>
+          <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m8 12 2.5 2.5L16 9"/></svg></div><h3>Software QA & App Testing</h3><p>Validate Windows and Android applications with structured functional, regression and release testing and clear defect reports.</p><a href="#contact" data-service="Software QA & App Testing">Discuss this service <span>→</span></a></article>
+          <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16m5-8h4m-4 4h4"/></svg></div><h3>Data & Business Automation</h3><p>Reduce manual work through spreadsheet automation, structured data processing, SQL reporting and business dashboards.</p><a href="#contact" data-service="Data & Business Automation">Discuss this service <span>→</span></a></article>
+          <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="5"/><path d="m10 12 1.4 1.4L14.5 10"/></svg></div><h3>Workflow & AI Automation</h3><p>Identify repetitive processes and explore practical API integrations, AI-assisted workflows and automation prototypes.</p><a href="#contact" data-service="Workflow & AI Automation">Discuss this service <span>→</span></a></article>
+        </div>
+        <div class="pill-row" aria-label="Technology experience"><span class="pill">Terraform</span><span class="pill">GitHub Actions</span><span class="pill">Azure DevOps</span><span class="pill">Helm</span><span class="pill">Docker</span><span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">Google Cloud</span><span class="pill">Power BI</span></div>
+      </div>
+    </section>
 
-    <div class="service-box">
-      <h3>AWS & GCP Cloud Development</h3>
-      <p>Cloud-native application development and infrastructure support.</p>
-    </div>
+    <section class="section section-soft" id="about"><div class="container split">
+      <div class="about-panel"><img class="about-logo" src="logo.png" alt="Jadhav Tech Solutions logo"><h3>Engineering that makes technology work harder for your business.</h3><p>Focused solutions, thoughtful implementation and practical documentation—built around your requirements.</p><div class="about-badges"><span>Cloud Engineering</span><span>Automation</span><span>Quality</span></div></div>
+      <div class="split-copy"><span class="section-kicker">About Jadhav Tech Solutions</span><h2>A practical partner for your next technology challenge</h2><p>Jadhav Tech Solutions is an emerging IT services business focused on cloud engineering, DevOps, container platforms, application testing and business automation. We aim to help teams simplify delivery, improve operational clarity and build maintainable solutions.</p><p>We start by understanding your current environment and business goals, then propose a scoped approach with clear deliverables. Project availability, timelines and support coverage are confirmed during discovery.</p><div class="benefits"><div class="benefit"><span class="benefit-icon">✓</span><div><strong>Outcome-focused</strong><small>Start with the problem to solve.</small></div></div><div class="benefit"><span class="benefit-icon">✓</span><div><strong>Automation-minded</strong><small>Reduce repeatable manual tasks.</small></div></div><div class="benefit"><span class="benefit-icon">✓</span><div><strong>Clear communication</strong><small>Agree on scope and deliverables.</small></div></div><div class="benefit"><span class="benefit-icon">✓</span><div><strong>Built to maintain</strong><small>Prefer documented, repeatable work.</small></div></div></div><a class="btn" href="#contact">Tell Us What You Need <span>↗</span></a></div>
+    </div></section>
 
-    <div class="service-box">
-      <h3>Windows & Android App Testing</h3>
-      <p>Functional, regression, and performance testing for reliable releases.</p>
-    </div>
+    <section class="section" id="process"><div class="container"><div class="section-head"><span class="section-kicker">How we work</span><h2>A clear path from idea to delivery</h2><p>A straightforward engagement process helps keep expectations, scope and communication aligned.</p></div><div class="process-grid"><article class="process-step"><div class="step-num">01</div><h3>Discover</h3><p>Understand your goals, current setup, constraints and success criteria.</p></article><article class="process-step"><div class="step-num">02</div><h3>Plan</h3><p>Agree on scope, milestones, responsibilities and the delivery approach.</p></article><article class="process-step"><div class="step-num">03</div><h3>Deliver</h3><p>Implement in manageable steps, validate outcomes and document changes.</p></article><article class="process-step"><div class="step-num">04</div><h3>Improve</h3><p>Review results and discuss any ongoing support or next-stage improvements.</p></article></div></div></section>
 
-    <div class="service-box">
-      <h3>Excel Automation & Data Entry</h3>
-      <p>Excel dashboards, reporting automation, and structured data services.</p>
-    </div>
+    <section class="cta-band"><div class="container"><div class="cta-inner"><div class="cta-copy"><h2>Have a project in mind?</h2><p>Tell us what you're trying to achieve. Let's explore a practical way to move forward.</p></div><a class="btn btn-light" href="#contact">Start a Conversation <span>↗</span></a></div></div></section>
 
-  </div>
-</section>
+    <section class="section section-soft" id="contact"><div class="container contact-grid"><div class="contact-copy"><span class="section-kicker">Let's talk</span><h2>Tell us about your project</h2><p>Share a few details and we'll prepare an email draft for your inquiry. A live form submission service can be connected in a later phase.</p><div class="contact-detail"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><div><strong>Email</strong><a href="mailto:akshaykumar.jadhav@jadhavtechsolutions.com">akshaykumar.jadhav@jadhavtechsolutions.com</a></div></div><div class="contact-detail"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><strong>Location</strong><span>Pune, Maharashtra, India</span></div></div><div class="contact-detail"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.7 2 2 0 0 1 3.1 1.5h3a2 2 0 0 1 2 1.7l.5 2.7a2 2 0 0 1-.6 1.9L6.7 9.1a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 1.9-.6l2.7.5a2 2 0 0 1 1.7 2.8Z" transform="translate(1 0) scale(.92)"/></svg></div><div><strong>Phone</strong><a href="tel:+917058072317">+91 70580 72317</a></div></div></div>
+      <form class="contact-form" id="contactForm"><div class="form-grid"><div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="email">Work email *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com"></div><div class="field"><label for="company">Company (optional)</label><input id="company" name="company" autocomplete="organization" placeholder="Company name"></div><div class="field"><label for="service">Service of interest *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Cloud & DevOps Engineering</option><option>Kubernetes & Containers</option><option>IT Support & Monitoring</option><option>Software QA & App Testing</option><option>Data & Business Automation</option><option>Workflow & AI Automation</option><option>Other / Not sure yet</option></select></div><div class="field field-full"><label for="details">How can we help? *</label><textarea id="details" name="details" required placeholder="Briefly describe your goals, current environment and timeline."></textarea></div><div class="field field-full"><button class="btn" type="submit">Prepare Email Inquiry <span>↗</span></button><p class="form-note">This static website does not send or store form entries. Your email application will open with a draft addressed to Jadhav Tech Solutions.</p><p class="form-status" id="formStatus" role="status"></p></div></div></form>
+    </div></section>
+  </main>
 
-<section>
-  <h2>Leadership Team</h2>
+  <footer><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand" href="#home"><img src="logo.png" alt=""><span class="brand-text"><strong>Jadhav Tech Solutions</strong><span>CLOUD · DEVOPS · IT SOLUTIONS</span></span></a><p>Practical technology services for teams that want to build reliably, automate thoughtfully and grow with confidence.</p></div><div class="footer-links"><h3>Explore</h3><a href="#services">Services</a><a href="#about">About us</a><a href="#process">How we work</a><a href="#contact">Contact</a></div><div class="footer-links"><h3>Get in touch</h3><a href="mailto:akshaykumar.jadhav@jadhavtechsolutions.com">Email us</a><a href="https://www.linkedin.com/in/akshaykumar-jadhav-486581216" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Jadhav Tech Solutions. All rights reserved.</span><span>Clear scope. Thoughtful engineering. Practical outcomes.</span></div></div></footer>
 
-  <h3>Founder – Akshaykumar Jadhav</h3>
-  <p>
-    MBA in Business Analytics with 8+ years of experience in the IT industry.
-    Specialized in multi-cloud deployments, Kubernetes platforms, DevOps automation,
-    and client support. Currently working as Senior Technical Lead at HCLTech.
-  </p>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/akshaykumar-jadhav-486581216" target="_blank">
-      View Profile
-    </a>
-  </p>
+  <button class="chat-launcher" id="chatLauncher" aria-expanded="false" aria-controls="chatPanel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg> Chat with us</button>
+  <section class="chat-panel" id="chatPanel" aria-label="JTS website assistant" aria-hidden="true"><div class="chat-head"><div class="bot-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12h.01M16 12h.01M9 16h6"/></svg></div><div><strong>JTS Assistant</strong><small>Website guide · automated demo</small></div><button class="chat-close" id="chatClose" aria-label="Close chatbot">×</button></div><div class="chat-messages" id="chatMessages" aria-live="polite"><div class="message bot">Hi! Welcome to Jadhav Tech Solutions. What would you like help with today?</div><div class="chat-options"><button class="chat-option" data-topic="services">Explore services</button><button class="chat-option" data-topic="cloud">Cloud & DevOps</button><button class="chat-option" data-topic="testing">App testing</button><button class="chat-option" data-topic="project">Discuss a project</button><button class="chat-option" data-topic="careers">Careers</button></div></div><div class="chat-notice">Demo chatbot: it does not use AI or store messages.</div><div class="chat-compose">Prefer email? <a href="mailto:akshaykumar.jadhav@jadhavtechsolutions.com">Contact our team</a></div></section>
 
-  <h3>Co-Founder – Aniket Jadhav</h3>
-  <p>
-    MBA in IT Operations with 10+ years of experience in managing IT support and
-    delivery projects. Currently working as Project Delivery Head at Tech Mahindra.
-  </p>
-</section>
+  <script>
+    (() => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      menuToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.textContent = open ? '×' : '☰';
+      });
+      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false'); menuToggle.textContent='☰';
+      }));
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-<section>
-  <h2>Our Satisfied Customers</h2>
-  <ul>
-    <li><strong>Shree Data Solutions (India)</strong> – Excel automation and large-scale data entry support.</li>
-    <li><strong>BluePixel Web Services (India)</strong> – DevOps and infrastructure support for web platforms.</li>
-    <li><strong>NextGen Mobility Labs (India)</strong> – Android application testing and quality assurance.</li>
-  </ul>
-  <p><em>Client names are representative to showcase service capabilities.</em></p>
-</section>
+      const serviceSelect = document.getElementById('service');
+      document.querySelectorAll('[data-service]').forEach(link => link.addEventListener('click', () => {
+        const option = [...serviceSelect.options].find(o => o.text === link.dataset.service);
+        if (option) serviceSelect.value = option.value;
+      }));
+      document.getElementById('contactForm').addEventListener('submit', event => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        const subject = encodeURIComponent('Project inquiry: ' + data.get('service'));
+        const body = encodeURIComponent(
+          'Name: ' + data.get('name') + '\nEmail: ' + data.get('email') + '\nCompany: ' + (data.get('company') || 'Not provided') +
+          '\nService: ' + data.get('service') + '\n\nRequirements:\n' + data.get('details')
+        );
+        document.getElementById('formStatus').textContent = 'Opening your email application with a prepared draft. Please review it and press Send.';
+        document.getElementById('formStatus').classList.add('show');
+        window.location.href = 'mailto:akshaykumar.jadhav@jadhavtechsolutions.com?subject=' + subject + '&body=' + body;
+      });
 
-<section>
-  <h2>Contact</h2>
-  <p><strong>Primary Email:</strong> jadhavakshaykumar105@gmail.com</p>
-  <p><strong>Official Email:</strong> akshaykumar.jadhav@jadhavtechsolutions.com</p>
-  <p><strong>Contact Number:</strong> +91 7058072317</p>
-  <p><strong>Location:</strong> Pune, Maharashtra, India</p>
-</section>
-
-<div class="cta">
-  <h2>Let’s Work Together</h2>
-  <p>
-    Looking for reliable IT support or cloud expertise?<br>
-    Email us at
-    <a href="mailto:akshaykumar.jadhav@jadhavtechsolutions.com">
-      akshaykumar.jadhav@jadhavtechsolutions.com
-    </a>
-  </p>
-</div>
-
-<footer>
-  © 2026 Jadhav Tech Solutions • Pune, India
-</footer>
-
+      const launcher = document.getElementById('chatLauncher');
+      const panel = document.getElementById('chatPanel');
+      const messages = document.getElementById('chatMessages');
+      const close = document.getElementById('chatClose');
+      function setChat(open) { panel.classList.toggle('open',open); panel.setAttribute('aria-hidden',String(!open)); launcher.setAttribute('aria-expanded',String(open)); if(open) close.focus(); }
+      launcher.addEventListener('click', () => setChat(!panel.classList.contains('open')));
+      close.addEventListener('click', () => { setChat(false); launcher.focus(); });
+      const replies = {
+        services: 'We currently present six service areas: Cloud & DevOps, Kubernetes & Containers, IT Support & Monitoring, Software QA & App Testing, Data & Business Automation, and Workflow & AI Automation. Which would you like to discuss?',
+        cloud: 'Our Cloud & DevOps scope can include CI/CD pipelines, infrastructure as code, cloud configuration and deployment automation across AWS, Azure and Google Cloud. The exact scope is confirmed after understanding your environment.',
+        testing: 'We can discuss structured Windows and Android application testing, functional checks, regression testing and defect documentation. Share your app type and testing goals to start a conversation.',
+        project: 'Great! Use the project inquiry form on this page to share your name, business email, service of interest and requirements. It will open an email draft; this demo does not submit or store your details.',
+        careers: 'Thanks for your interest. Recruitment details and open positions are not published in this demo. Please email the team with the subject “Careers inquiry” to ask about current opportunities.'
+      };
+      function addMessage(text, who) { const el = document.createElement('div'); el.className = 'message ' + who; el.textContent = text; messages.appendChild(el); messages.scrollTop = messages.scrollHeight; }
+      function addOptions() { const wrap = document.createElement('div'); wrap.className = 'chat-options'; [['services','Explore services'],['cloud','Cloud & DevOps'],['testing','App testing'],['project','Discuss a project'],['careers','Careers']].forEach(([topic,label]) => { const b = document.createElement('button'); b.className='chat-option'; b.type='button'; b.textContent=label; b.addEventListener('click',()=>chooseTopic(topic,label)); wrap.appendChild(b); }); messages.appendChild(wrap); messages.scrollTop=messages.scrollHeight; }
+      function chooseTopic(topic,label) { addMessage(label,'user'); addMessage(replies[topic],'bot'); if(topic==='project') { const a=document.createElement('a'); a.href='#contact'; a.textContent='Go to project inquiry form ↓'; a.style.cssText='display:inline-block;margin:0 0 12px;font-size:12px;font-weight:800;color:#3679f6'; a.addEventListener('click',()=>setChat(false)); messages.appendChild(a); } addOptions(); }
+      messages.querySelectorAll('[data-topic]').forEach(button => button.addEventListener('click', () => chooseTopic(button.dataset.topic,button.textContent)));
+    })();
+  </script>
 </body>
 </html>
